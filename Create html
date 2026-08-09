@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Career Recommendation</title>
+</head>
+
+<body>
+
+<h1>Career Recommendation</h1>
+
+<h3>Student: {{ name }}</h3>
+<p>Stream: {{ stream }}</p>
+
+<h3>Skill Match: {{ result.percentage }}%</h3>
+
+<p>
+    Matched Skills:
+    {{ result.matched }}
+</p>
+
+<h3>Recommended Careers</h3>
+
+<ul>
+{% for career in result.careers %}
+    <li>{{ career }}</li>
+{% endfor %}
+</ul>
+
+<a href="/">Try Again</a>
+
+</body>
+</html>
