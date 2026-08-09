@@ -1,0 +1,10 @@
+CREATE DATABASE career_guidance;
+
+USE career_guidance;
+
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    stream VARCHAR(100),
+    skills VARCHAR(500)
+);
