@@ -1,0 +1,46 @@
+careers = {
+    "Computer Science": {
+        "skills": ["python", "java", "programming", "problem solving"],
+        "careers": [
+            "Software Developer",
+            "Data Analyst",
+            "Web Developer"
+        ]
+    },
+
+    "Commerce": {
+        "skills": ["accounting", "finance", "business", "communication"],
+        "careers": [
+            "Accountant",
+            "Financial Analyst",
+            "Business Manager"
+        ]
+    },
+
+    "Arts": {
+        "skills": ["creativity", "communication", "writing", "design"],
+        "careers": [
+            "Content Writer",
+            "Graphic Designer",
+            "Teacher"
+        ]
+    }
+}
+
+
+def recommend_career(stream, student_skills):
+
+    if stream not in careers:
+        return None
+
+    required = careers[stream]["skills"]
+
+    matched = set(student_skills) & set(required)
+
+    percentage = (len(matched) / len(required)) * 100
+
+    return {
+        "careers": careers[stream]["careers"],
+        "matched": list(matched),
+        "percentage": round(percentage, 2)
+    }
