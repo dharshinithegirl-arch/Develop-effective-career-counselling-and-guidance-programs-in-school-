@@ -1,0 +1,11 @@
+Develop-Effective-Career-Counselling/
+│
+├── app.py
+├── career_guidance.py
+├── database.sql
+├── templates/
+│   ├── index.html
+│   └── result.html
+├── static/
+│   └── style.css
+└── README.md
